@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> Exercise 4 </title>
+    <center><h1>Dummy Text</h1></center>
+</head>
+
+<body>
+
+<form>
+<label for="redvalueb">Red Value(0-255) (Border):</label>
+<input type="text" id="redb" name="rebd" required minlength="4" maxlength="8" size="10"><br>
+
+<label for="greenvalueb">Green Value(0-255) (Border):</label>
+<input type="text" id="greenb" name="greenb" required minlength="4" maxlength="8" size="10"><br>
+
+<label for="bluevalueb">Blue Value(0-255) (Border):</label>
+<input type="text" id="blueb" name="blueb" required minlength="4" maxlength="8" size="10"><br>
+
+<label for="width">Width (Border):</label>
+<input type="text" id="width" name="width" required minlength="4" maxlength="8" size="10"><br>
+
+<label for="redvalueg">Red Value(0-255) (Background):</label>
+<input type="text" id="redg" name="redg" required minlength="4" maxlength="8" size="10"><br>
+
+<label for="greenvalueg">Green Value(0-255) (Background):</label>
+<input type="text" id="greeng" name="greeng" required minlength="4" maxlength="8" size="10"><br>
+
+<label for="bluevalueg">Blue Value(0-255) (Background):</label>
+<input type="text" id="blueg" name="blueg" required minlength="4" maxlength="8" size="10"><br>
+</form>
+
+<button onclick="apply()">Apply!</button>
+
+<center><p id = "para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
+
+
+
+</body>
+
+<script>
+
+    var redb = docuement.getElementById("redb");
+    var greenb = docuement.getElementById("greenb");
+    var blueb = docuement.getElementById("blueb"); 
+    var width = docuement.getElementById("width"); 
+    var redg = docuement.getElementById("redg"); 
+    var greeng = docuement.getElementById("greeng"); 
+    var blueg = docuement.getElementById("blueg"); 
+
+    function apply(){
+      document.getElementById("redb").style.borderColor = "red";
+      document.getElementById("greenb").style.borderColor = "green";
+      document.getElementById("blueb").style.borderColor = "blue";  
+      document.getElementById("redg").style.backgroundColor = "red";  
+      document.getElementById("greeng").style.backgroundColor = "green";
+      document.getElementById("blueg").style.backgroundColor = "blue";
+       
+    }
+
+
+</script>
+
+
+
+</html>

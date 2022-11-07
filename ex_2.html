@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 2</title>
+        <center><h1>Cities Slideshow</h1></center>
+    </head>
+    <body>
+    
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      
+      <center><img src="images/atlanta.jpg" height="400" width="600"></center>
+      
+    </div>
+    
+    <div class="mySlides fade">
+      
+      <center><img src="images/boston.jpg" height="400" width="600"></center>
+    
+    </div>
+    
+    <div class="mySlides fade">
+      
+      <center><img src="images/denver.jpg" height="400" width="600"></center>
+      
+    </div>
+
+    <div class="mySlides fade">
+      
+      <center><img src="images/new_york.jpg" height="400" width="600"></center>
+      
+    </div>
+
+    <div class="mySlides fade">
+      
+      <center> <img src="images/kc.jpg" height="400" width="600"></center>
+      
+    </div>
+    
+    <br><br><center><button onclick="plusSlides(-1)">Previous<center> <button onclick="plusSlides(1)">Next</b></center></b></center>
+    
+    
+    </div>
+    
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+    </body>
+    </html> 
+    

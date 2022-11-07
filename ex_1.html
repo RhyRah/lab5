@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Exercise One </title>
+  </head>
+  <body>
+    <h2>Exercise One</h2>
+    <form>
+        <label for="firstpass">Password:</label><br>
+        <input type:"text" id="firstpass" name="firstpass"><br>
+        <label for="validpass">Validate Password:</label><br>
+        <input type:"text" id="validpass" name="validpass"><br><br>  
+    </form>
+
+    <button onclick="submit_pass()">Validate</button>
+
+    <p id = "notmatch"></p>
+    <p id = "notlong"></p>
+    <p id = "valid"></p>
+
+  </body>  
+  
+  <script>
+    var firstpass = document.getElementById("firstpass");
+    var validpass = document.getElementById("validpass");
+
+    function submit_pass(){
+
+     document.getElementById("valid").innerHTML = "";                                   
+     document.getElementById("notlong").innerHTML = "";
+     document.getElementById("notmatch").innerHTML = "";
+
+     if(firstpass.value.length < 8 || validpass.value.length < 8 ){
+
+         document.getElementById("notlong").innerHTML = "The passwords are not at least 8 characters long";
+
+        }
+
+     if(firstpass.value != validpass.value){
+         
+         document.getElementById("notmatch").innerHTML = "The passwords entered do not match";
+
+        }
+    
+     if((firstpass.value.length > 8 || validpass.value.length > 8 ) && (firstpass.value == validpass.value) ){
+    
+         document.getElementById("valid").innerHTML = "Valid!";
+
+        }
+
+    }
+  </script>
+
+
+</html>
